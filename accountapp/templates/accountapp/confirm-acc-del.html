@@ -1,0 +1,35 @@
+{% comment %} this page is not in use {% endcomment %}
+
+
+
+
+
+
+{% comment %}  
+{% extends 'accountapp/base.html' %}
+{% load static %}
+
+{% block title %}
+confirm  account deletion
+{% endblock  %}
+
+{% block pagespecificstyles %}
+{% static 'accountapp/confirm-acc-del.css' %}
+{% endblock %}
+
+
+{% block content %}
+<main class="confirm-acc-del">
+
+    <h1>[ Lockr ] <img src="{% static "accountapp/images/padlock.png"  %}" alt="logo icon" class="logo-icon"></h1>
+
+    <form action="" method="POST">
+        {% csrf_token %}
+    <P>Deleting account will delete all your saved data. Are you sure you want to delete Account "?</P>
+    
+    <button type="button">confirm</button>
+    </form>
+    <a href="{% url "homepage" %}">NO, take me back</a>
+</main>
+
+{% endblock  %} {% endcomment %}

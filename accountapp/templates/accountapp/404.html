@@ -1,0 +1,24 @@
+{% extends 'accountapp/base.html' %}
+{% load static %}
+
+
+{% block bootstrapstyles %}
+{% static 'accountapp/css/bootstrap.min.css' %} 
+{% endblock  %}
+
+{% block styles %}
+{% static 'accountapp/404.css' %}
+{% endblock  %}
+
+{% block content %}
+<h1>[ Lockr ] <img src="{% static "accountapp/images/padlock.png"  %}" alt="logo icon" class="logo-icon" ></h1>
+
+<p>
+    <strong>404.</strong> That's an error.
+</p>
+
+<p>
+    The requested URL was not founf on this server.
+</p>
+
+{% endblock  %}

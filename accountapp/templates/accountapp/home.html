@@ -1,0 +1,194 @@
+{% comment %} {% extends 'accountapp/base.html' %} {% endcomment %}
+
+{% include "./include/header-base-loader.html" with user=user messages=messages pagecsspath="accountapp/home.css" %}
+{% load static %}
+
+{% comment %} {% extends 'accountapp/base.html' %}
+{% load static %}
+
+{% block title %}
+account info
+{% endblock  %}
+
+
+{% block bootstrapstyles %}
+{% static 'accountapp/css/bootstrap.min.css' %} 
+{% endblock  %}
+
+{% block styles %}
+{% static 'accountapp/header.css' %}
+{% endblock  %}
+
+
+
+{% block header %}
+{% include "accountapp/include/header.html" with user=user messages=messages %}
+{% endblock  %} {% endcomment %}
+
+
+{% comment %} 
+{% load static %}
+
+{% block bootstrapstyles %}
+{% static 'accountapp/css/bootstrap.min.css' %} 
+{% endblock  %}
+
+{% block styles %}
+{% static 'accountapp/header.css' %}
+{% endblock  %}
+
+
+{% block header %}
+
+
+
+<div class="navbar">
+    <a class="brand" href="{% url 'homepage' %}">
+        <h1>[ Lockr ] <img src="{% static "accountapp/images/padlock.png"  %}" alt="logo icon" class="logo-icon"></h1>
+    </a>
+    <div class="navbar-inner">
+        
+        <ul class="nav">
+            <li class="active">
+                <a href="{% url 'homepage' %}">Home</a>
+            </li>
+            
+            
+            <li>
+                
+                <a href="/savenewpassword">new +</a>
+            </li>
+            <li>
+                <a href="{% url "accountinfo" user.pk %}"> settings </a>
+                
+            </li>
+            
+            <li>
+                {% if user.is_authenticated %}
+                <a href="/logout">logout</a>
+                {%else%}
+                <a href="/login">login</a>
+                {% endif %}
+
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+
+
+{%if messages%}
+<ul class = "messages">
+
+    {% for message in messages  %}
+    <li {% if message.tags %} class= "{{message.tags}}"{% endif %}>
+        {{message}}
+    </li>
+    
+    {% endfor %}
+
+</ul>
+{% endif %}
+
+
+
+{% endblock  %} {% endcomment %}
+
+{% comment %} -------------------working old code with list {% endcomment %}
+{% comment %} 
+{% block content %}
+
+<main class="homepage">
+    <h1>saved password list</h1>
+    
+
+    {% if password_list %}
+
+    <ul class="list-group tab-content">
+        {% for password in password_list%}
+        <li class="list-group-item list-group-item-action">
+            {% comment %} <a href="{{ password.get_absolute_url }}">{{ password.name }}</a> 
+            
+            <a href="{{ password.get_absolute_url}}">
+                
+                <button class="btn btn-outline-success">
+                    {{ password.name }}
+                    {{ password.email}}
+                </button>
+                
+                </a>
+
+        </li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    
+    <p>there are no passwords</p>
+    {% endif %}
+</main>
+
+{% endblock  %}
+
+ {% endcomment %}
+
+
+
+
+
+
+{% block content %}
+
+<main class="homepage">
+    {% comment %} <h1>saved password list</h1> {% endcomment %}
+
+    {% if password_list %}
+
+<table class="table">
+    <thead>
+        <tr>
+            <td> name</td>
+            <td> email</td>
+            <td> domain</td>
+            <td> username</td>
+            <td> password</td> 
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        {% for password in password_list%}
+    
+        <tr>
+            <td>
+                {{ password.name }}
+            </td>
+             <td>
+                {{ password.email}}
+            </td>
+            <td>
+                {{ password.domain}}
+            </td>
+            <td>
+                {{ password.username}}
+            </td>
+            <td>
+             <img src="{% static "accountapp/images/padlock.png"  %}" alt="encrypted icon" class="encicon"> encrypted
+            </td> 
+            <td id="enccol">
+                 <a href="{{ password.get_absolute_url}}">
+                <button class="btn btn-success">decrypt & open</button></a> 
+    
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+    {% else %}
+    
+    <p class="nodata">to add data, click on new+ </p>
+    {% endif %}
+</main>
+
+{% endblock  %}

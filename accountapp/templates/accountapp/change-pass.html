@@ -1,0 +1,15 @@
+{% include "./include/header-base-loader.html" with pagecsspath="accountapp/change-pass.css" %}
+
+
+{% block content %}
+
+<main class="changepass">
+    <form action="" method="POST">
+    {% csrf_token %}
+    
+    {{ form}}
+    
+    <button type="submit">change password</button>
+    </form>
+</main>
+{% endblock  %}

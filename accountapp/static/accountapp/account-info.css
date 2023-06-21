@@ -1,0 +1,32 @@
+.account-info table{
+    width: 40%;
+    margin: 2em 2em;
+}
+
+.account-info table td:first-child{
+    text-transform: capitalize;
+    font-weight: 500;
+}
+
+.account-info h3{
+    margin: 1em 2em;
+}
+
+.account-info .options{
+    margin: 0 2em;
+}
+
+.account-info .options .btn{
+    background-color: rgb(8, 163, 93);
+    color: white;
+}
+
+.account-info .options .btn-del{
+    background-color: rgb(255, 25, 0);
+    
+}
+
+.account-info .options a{
+    text-decoration: none;
+   
+}

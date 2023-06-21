@@ -1,0 +1,158 @@
+html,body{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    /* background-color: rgb(37, 37, 37); */
+    /* background-image: linear-gradient(to right,rgb(29, 190, 0), rgb(166, 228, 253)); */
+    background-image: linear-gradient(to right,rgb(8, 163, 93), rgb(183, 253, 235));
+    /* background-image: linear-gradient(to right,rgb(2, 151, 94), rgb(125, 214, 250)); */
+    
+}
+.register {
+    /* margin: 0 2em 0 0; */
+    margin-bottom: 5em;
+}
+
+
+.register h1{
+    text-align: center;
+    font-size: 3em;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-family: 'Century Gothic';
+    font-weight: bold;
+    text-shadow: 2px 2px white;
+    /* text-decoration: underline; */
+    /* border: 5px solid rgb(10, 10, 10); */
+    width: fit-content;
+    padding: 2px 50px;
+    /* box-shadow: 2px 2px white; */
+    margin: 0.6em auto;
+    position: relative;
+
+}
+
+
+.register .logo-icon{
+    height: 0.7em;
+    width: 0.7em;
+    transform: rotate(-50deg);
+    color: black;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 79%;
+    top:72%;
+    color: red;
+}
+
+.register .sub-title{
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.register form{
+    margin: 5% auto 1em auto;
+    width: 400px;
+    height: fit-content;
+    padding: 40px 10px;
+    /* padding-top: 30px; */
+    border: 2px solid rgb(4, 154, 51);
+    border-radius: 7px;
+    background-color: rgb(206, 247, 206);
+}
+
+.register input,button,label{
+    margin: 10px  auto;
+    display: block;
+    width: 80%;
+    padding: 0.5rem 0;
+    border-radius: inherit;
+}
+
+.register input{
+    background-color: white;
+    padding-left: 10px;
+    border: 1px solid rgb(0, 213, 117);
+}
+
+
+.register label{
+    display: block;
+    margin:5px auto;
+    padding: 0;
+    font-weight: bold;
+    font-family: inherit;
+}
+
+.register button{
+    border: none;
+    margin-top: 2em;
+    background-color: rgb(0, 213, 117);
+    text-transform: capitalize;
+    font-weight: bold;
+    cursor: pointer;
+}
+.register button:focus, input:focus{
+    outline: none;
+    
+}
+
+
+.register p{
+    text-align: center;
+    
+}
+
+.register li.error{
+    color: rgb(246, 65, 19);
+    margin: 0 auto;
+    padding: 0;
+}
+
+.register li{
+    list-style: none;
+}
+
+.register li.info{
+    color: rgb(8, 163, 93);
+}
+
+.register ul.messages{
+    margin: 0 auto 10px auto;
+    padding: 0;
+    text-align: center;
+}
+
+
+
+.register a{
+    /* text-decoration: none; */
+    /* color: rgb(8, 170, 195); */
+    /* color: black; */
+    /* color: rgb(1, 38, 26); */
+    font-weight: bold;
+    color: rgb(43, 43, 151);
+    /* border-bottom: 2px solid rgb(10, 10, 10); */
+    /* border-bottom: 2px solid green; */
+}
+
+.register span{
+    display: block;
+    /* background-color: red; */
+    
+}
+
+.register .helptext{
+ width: 80%;
+ margin: 0em auto 0.5em auto;
+}
+
+.register .helptext ul{
+    margin: 0 0 2em 1em;
+    padding: 0;
+
+}
+
+.register .helptext li{
+    list-style: disc;
+}

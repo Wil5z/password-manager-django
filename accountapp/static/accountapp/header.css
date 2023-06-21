@@ -1,0 +1,94 @@
+html,body{
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.navbar h1{
+    text-align: center;
+    font-size: 2.3em;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-family: 'Century Gothic';
+    font-weight: bold;
+    text-shadow: 2px 2px white;
+    /* text-decoration: underline; */
+    /* border: 5px solid rgb(10, 10, 10); */
+    width: fit-content;
+    padding: 2px 30px;
+    /* box-shadow: 2px 2px white; */
+    margin: 0 auto;
+    color: black;
+    position: relative;
+
+}
+
+.navbar a{
+    text-decoration: none;
+}
+
+.navbar img{
+    height: 0.7em;
+    width: 0.7em;
+    transform: rotate(-50deg);
+    color: black;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    left: 80.5%;
+    top:69%;
+}
+
+div.navbar{
+    background-color: rgb(27, 169, 105);
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(to right, rgb(87, 222, 188),rgb(27, 169, 105));
+}
+
+.navbar-inner{
+    margin-right: 1em;
+}
+
+.navbar-inner a{
+    text-transform: capitalize;
+    color: white;
+    text-decoration: none;
+    padding: 1.4em 1em ;
+    border: none;
+    /* border-radius: 5px; */
+
+}
+
+ .navbar-inner a:hover{
+    color: white;
+    background-color:rgb(17, 144, 87);
+}
+
+
+ .info{
+    padding: 0;
+    margin: 0.1em 2em;
+    text-align: right;
+    list-style-type: none;
+    color: green;
+}
+
+ .error{
+    padding: 0;
+    margin: 0.1em 2em;
+    text-align: right;
+    list-style-type: none;
+    color: orangered;
+}
+.success{
+    padding: 0;
+    margin: 0.1em 2em;
+    text-align: right;
+    list-style-type: none;
+    color: green;
+}
+
+.messages{
+    margin: 0;
+}

@@ -1,0 +1,74 @@
+{% include "./include/header-base-loader.html" with pagecsspath="accountapp/account-info.css" %}
+
+
+{% block content %}
+
+<main class="account-info">
+
+    <h3>Account details</h3>
+
+<table class="table">
+    <tbody>
+        <tr>
+            <td>
+                username
+            </td>
+            <td>
+                {{ cur_user.username }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                email
+            </td>
+            <td>
+                {{ cur_user.email }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                first name
+            </td>
+            <td>
+                {{ cur_user.first_name }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                last name
+            </td>
+            <td>
+                {{ cur_user.last_name }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                last login
+            </td>
+            <td>
+                {{ cur_user.last_login }}
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Date joined
+            </td>
+            <td>
+                {{ cur_user.date_joined }}
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<div class="options">
+    <a href="{% url "changepassword" %}"> <button class="btn">change password</button></a>
+    <a href="{% url "passwordreset"  %}"><button class="btn">reset password</button></a>
+    <a href="{% url "deleteaccount" cur_user.pk%}"> <button class="btn btn-del">delete account</button></a>
+</div>
+
+</main>
+
+
+{% endblock  %}
+
+ 

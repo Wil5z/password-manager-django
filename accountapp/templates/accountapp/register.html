@@ -1,0 +1,44 @@
+{% extends 'accountapp/base.html' %}
+
+{% load static %}
+
+{% block styles %}{% static "accountapp/register.css" %}{% endblock  %}
+
+
+
+
+{% block content %} 
+
+<main class="register">
+	
+		
+	<h1>[ Lockr ] <img src="{% static "accountapp/images/padlock.png"  %}" alt="logo icon" class="logo-icon"></h1>
+	<p class="sub-title">
+		A secure place to store all your [ Account Passwords ]...
+	</p>
+	
+	
+		<form method="POST">
+			 {% csrf_token %}
+			 
+			 
+		{%if messages%}
+		<ul class = "messages">
+		
+			{% for message in messages  %}
+			<li {% if message.tags %} class= "{{message.tags}}"{% endif %}>
+				{{message}}
+			</li>
+			
+			{% endfor %}
+		
+		</ul>
+		{% endif %}
+					   {{ register_form}}    
+			<button class="btn btn-primary" type="submit">Sign-up</button>
+		</form>
+		<p class="text-center">If you already have an account, <a href="/login">Login</a> instead.</p>
+	
+</main>	
+
+{% endblock %}

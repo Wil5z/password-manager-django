@@ -1,0 +1,40 @@
+.detailpg form{
+    display: flex;
+    flex-direction: column;
+    width: 27%;
+    margin: 3em auto;
+    border: 2px solid rgb(8, 163, 93);
+    border-radius: 5px;
+    padding: 2em 2em;
+    background-color: rgb(206, 247, 206);
+}
+
+
+.detailpg form button{
+    border: none;
+    padding: 0.5em 1em;
+    width: 15em;
+    margin: 1em auto;
+    color: white;
+    background-color: rgb(8, 163, 93);
+}
+
+.detailpg button:focus, input:focus{
+    outline: none;
+    
+}
+
+.detailpg form a{
+    text-align: center;
+
+}
+
+.detailpg input{
+    margin-bottom:0.5em ;
+    /* border-radius: 5px; */
+    padding: 0.2em 0.2em;
+}
+
+.detailpg .btn-del{
+    background-color: rgb(255, 25, 0);
+}

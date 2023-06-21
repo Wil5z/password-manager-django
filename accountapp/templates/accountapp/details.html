@@ -1,0 +1,28 @@
+{% include "./include/header-base-loader.html" with pagecsspath="accountapp/detail.css" %}
+
+
+{% block content %}
+
+<main class="detailpg">
+
+    <form action="">
+        <label for="name">name</label>
+        <input type="text" id='name' value="{{ password.name }}" readonly="readonly">
+        <label for="email">email</label>
+        <input type="text" id='email' value="{{ password.email }}" readonly="readonly">
+        <label for="domain">domain</label>
+        <input type="text" id='domain' value="{{ password.domain }}" readonly="readonly">
+        <label for="username">username</label>
+        <input type="text" id='username' value="{{ password.username }}" readonly="readonly">
+        <label for="paswd">password</label>
+        <input type="text" id='paswd' value="{{ password.password }}" readonly="readonly">
+
+        <a href="{% url "editit" password.pk %}"><button type="button"> edit</button></a>
+        <a href="{% url "deleteit" password.pk%}"><button type="button" class="btn-del">delete</button></a>
+    </form>
+                    
+    
+</main>
+
+{% endblock  %}
+

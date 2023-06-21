@@ -1,0 +1,39 @@
+
+
+.pass-reset form{
+    width: 57%;
+    margin: 0.5em 2em;
+    padding: 1.5em 2em;
+}
+
+.pass-reset form label{
+    font-weight: 500;
+    font-size: 1.2em;
+}
+
+.pass-reset form button{
+    border: none;
+    padding: 0.3em 0.2em;
+    width: 10em;
+    color: white;
+    background-color: rgb(8, 163, 93);
+}
+
+.pass-reset button:focus, input:focus{
+    outline: none;
+    
+}
+
+.pass-reset input{
+    margin-bottom:0.5em ;
+    padding: 0.2em 0.2em;
+}
+
+.pass-reset h2{
+    margin: 1em 2em 0.5em 2em;
+}
+
+.pass-reset p{
+    margin: 0.5em 4em;
+}
+

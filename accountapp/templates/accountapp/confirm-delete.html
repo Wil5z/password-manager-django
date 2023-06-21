@@ -1,0 +1,14 @@
+{% include "./include/header-base-loader.html" with pagecsspath="accountapp/confirm-delete.css" %} 
+
+
+{% block content %}
+<main class="confirm-deletion">
+    <form action="" method="POST">
+        {% csrf_token %}
+    <P>Are you sure you want to delete " {{ password.name }} " ?</P>
+    
+    <button type="submit" class="btn-del">confirm</button>
+    </form>
+</main>
+
+{% endblock  %}

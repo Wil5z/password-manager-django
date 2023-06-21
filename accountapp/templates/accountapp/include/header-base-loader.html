@@ -1,0 +1,20 @@
+{% extends 'accountapp/base.html' %}
+{% load static %}
+
+
+{% block bootstrapstyles %}
+{% static 'accountapp/css/bootstrap.min.css' %} 
+{% endblock  %}
+
+{% block styles %}
+{% static 'accountapp/header.css' %}
+{% endblock  %} 
+
+{% block pagespecificstyles %}
+{% static pagecsspath %}
+{% endblock %}
+
+
+{% block header %}
+{% include "accountapp/include/header.html" with user=user messages=messages  %}
+{% endblock  %}

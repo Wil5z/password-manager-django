@@ -1,0 +1,14 @@
+{% comment %} {% extends 'accountapp/base.html' %} {% endcomment %}
+{% include "./include/header-base-loader.html" with pagecsspath="accountapp/update-pass.css" %}
+
+{% block content %}
+<main class="updatepg">
+    <form action="" method="POST">
+    {% csrf_token %}
+    
+    {{ form}}
+    
+    <button type="submit">update</button>
+    </form>
+</main>
+{% endblock  %}
